@@ -1,0 +1,16 @@
+<%= form_for @post do |f|%>
+<p>
+	<%= f.label :title%>
+	<%= f.text_field :title%>
+</p>
+<p>
+	<%= f.label :content %>
+	<%= f.text_area :content%>
+</p>
+<p>
+	<% if params[:title].present? %>
+		<%= f.submit "Update" %></p>
+	<% else %>
+		<%= f.submit %></p>
+	<% end %>
+<% end %>
